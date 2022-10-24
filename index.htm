@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab 4 作業</title>
+	<style>
+		body {font-family: Verdana, Geneva, sans-serif; font-size: 11pt;}
+		h2 {font-size: 14pt;}
+    div {float:left; margin-left:5px; border:solid rgb(255, 183, 0) 1px;}
+		#box {background-color:rgb(255, 153, 187);height:100px;width:100px;}
+    body {
+            background-image: url(https://images5.alphacoders.com/314/314574.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .square {
+    width: 200px;
+    height: 100px;
+    background-image:url(https://images5.alphacoders.com/587/587597.jpg);
+    background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+    display: block;
+    position: relative;
+
+    /* animation 參數設定 */
+    animation-name: MoveCat;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 15s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 1s;    /*動畫延遲開始時間*/
+    animation-iteration-count: infinite;    /*動畫次數，infinite 為無限次*/    
+  
+}
+@keyframes MoveCat {
+    0% { left: 0; }
+    25% { left: 20%; }
+    50% { left: 60%; }
+    75% { left: 80%; }
+    100% { left: 100%; }
+}
+
+.sss{
+    width: 300px;
+    height: 100px;
+    background-image:url(https://images2.alphacoders.com/564/564835.jpg);
+    background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+    display: block;
+    position: relative;
+
+    /* animation 參數設定 */
+    animation-name: aa;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 50s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 1s;    /*動畫延遲開始時間*/
+    animation-iteration-count: infinite;    /*動畫次數，infinite 為無限次*/    
+  
+}
+
+@keyframes aa {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+	</style>
+	<script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<script>
+	$(document).ready(function(){	
+        alert("梅興老師萬歲");
+		$('tr:even').css('background-color','#FF9');
+		$('tr:odd').css('background-color','#CFF');
+		$('tr:first').css('background-color','#FCF');
+
+    $('#btnFadeout').click(function(){
+			$('#box').fadeOut(500);
+		});
+		$('#btnFadein').click(function(){
+			$('#box').fadeIn('slow');
+		});
+		$('#btnFadeto').click(function(){
+			$('#box').fadeTo('slow', 0.5);
+		});
+		$('#btnFadeToggle').click(function(){
+			$('#box').fadeToggle('slow');
+		});	
+	});
+	</script>
+</head>
+
+<body >
+<div id="divA">
+  <h2>認識輔大</h2>
+  <p>輔大是所私立大學</p>
+  <table width="400" border="1">
+    <tr>
+      <td>相關網站</td>
+    </tr>  
+    <tr>
+      <td>輔大全球資訊網 https://www.fju.edu.tw/</td>
+    </tr>
+    <tr>
+      <td herf="">tronclass https://elearn2.fju.edu.tw/user/courses</td>
+    </tr>
+    <tr>
+      <td>圖書館 http://home.lib.fju.edu.tw/TC/</td>
+    </tr>
+    <tr>
+      <td>理工學院 https://www.facebook.com/groups/300846203725831</td>
+    </tr>
+    <ul>
+        <li><a href="http://jquery.com/">jQuery官方網站</a></li>
+        <li><a href="http://jquery.com/download/">jQuery下載</a></li>
+        <li><a href="http://learn.jquery.com/">jQuery學習中心</a></li>
+        <li><a href="http://blog.jquery.com/">jQuery部落格</a></li>
+      </ul>
+  </table>
+
+  <p>
+    <input type="button" id="btnFadein" value="淡入">
+    <input type="button" id="btnFadeout" value="淡出">
+    <input type="button" id="btnFadeto" value="透明">
+    <input type="button" id="btnFadeToggle" value="切換">  
+  </p>
+  <p>&nbsp; </p>
+  <div id="box">Box</div>
+  <div class="square"></div>
+  <div class="sss"></div>
+</div>
+
+</body>
+</html>
