@@ -68,7 +68,7 @@
 }
 
 	</style>
-	<script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
 	
 </head>
 
@@ -76,21 +76,21 @@
   <script>
     $(document).ready(function(){	
           alert("梅興老師萬歲");
-      $('tr:even').css('background-color','#FF9');
-      $('tr:odd').css('background-color','#CFF');
-      $('tr:first').css('background-color','#FCF');
+      $("tr:even").css("background-color","#FF9");
+      $("tr:odd").css("background-color","#CFF");
+      $("tr:first").css("background-color","#FCF");
   
-      $('#btnFadeout').click(function(){
-        $('#box').fadeOut(500);
+      $("#btnFadeout").click(function(){
+        $("#box").fadeOut(500);
       });
-      $('#btnFadein').click(function(){
-        $('#box').fadeIn('slow');
+      $("#btnFadein").click(function(){
+        $("#box").fadeIn("slow");
       });
-      $('#btnFadeto').click(function(){
-        $('#box').fadeTo('slow', 0.5);
+      $("#btnFadeto").click(function(){
+        $("#box").fadeTo("slow", 0.5);
       });
       $('#btnFadeToggle').click(function(){
-        $('#box').fadeToggle('slow');
+        $("#box").fadeToggle("slow");
       });	
     });
     </script>
